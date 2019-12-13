@@ -1,0 +1,5 @@
+/playlist/*.txt
+/playlist/*.m3u
+.vscode
+videos
+.history

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  scraper:
+    image: ubuntu   
+    container_name: scraper   
+    volumes:
+    - "./playlist:${FOLDERSHARED}"
+    - ./code:/code
+    environment:
+      DOMAIN: ${DOMAIN}
+      MASK: ${MASK}
+      FOLDERSHARED: ${FOLDERSHARED}
+      HOSTIP: ${HOSTIP}
+      PROXY: ${PROXY}
+      PORTPROXY: ${PORTPROXY}
+      IGNOREPASTEVENTS: ${IGNOREPASTEVENTS}
+      PASTEVENTSTHRESOLDHOURS: ${PASTEVENTSTHRESOLDHOURS}
+    command: sh -c "sleep 3600"

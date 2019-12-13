@@ -1,0 +1,9 @@
+version: '3'
+services: 
+  aceproxy:
+    image: ikatson/aceproxy
+    container_name: aceproxy
+    ports:
+      - "${PORTPROXY}:8000" 
+    volumes:
+      - "./code/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf"   
